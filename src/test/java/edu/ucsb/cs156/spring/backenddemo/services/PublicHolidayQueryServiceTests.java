@@ -33,7 +33,7 @@ public class PublicHolidayQueryServiceTests {
                 .andExpect(header("Content-Type", MediaType.APPLICATION_JSON.toString()))
                 .andRespond(withSuccess(fakeJsonResult, MediaType.APPLICATION_JSON));
 
-        String actualResult = publicHolidayQueryService.getJSON(year, expectedURL);
+        String actualResult = publicHolidayQueryService.getJSON(year, countryCode);
         assertEquals(fakeJsonResult, actualResult);
     }
 }

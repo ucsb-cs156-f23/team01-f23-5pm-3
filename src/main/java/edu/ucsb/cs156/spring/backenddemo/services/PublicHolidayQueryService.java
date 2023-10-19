@@ -2,6 +2,8 @@ package edu.ucsb.cs156.spring.backenddemo.services;
 
 import org.springframework.web.client.RestTemplate;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
@@ -20,6 +22,7 @@ import org.springframework.web.client.HttpClientErrorException;
 @Service
 public class PublicHolidayQueryService {
 
+    ObjectMapper mapper = new ObjectMapper();
 
     private final RestTemplate restTemplate;
 
