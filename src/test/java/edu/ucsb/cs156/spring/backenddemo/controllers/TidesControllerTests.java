@@ -32,7 +32,7 @@ public class TidesControllerTests {
 
 
     @Test
-    public void test_getEarthquakes() throws Exception {
+    public void test_getTides() throws Exception {
         String fakeJsonResult="{ \"fake\" : \"result\" }";
         String beginDate = "20220405";
         String endDate = "20230405";
