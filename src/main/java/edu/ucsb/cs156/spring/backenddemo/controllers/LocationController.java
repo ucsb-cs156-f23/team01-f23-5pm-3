@@ -1,7 +1,6 @@
 package edu.ucsb.cs156.spring.backenddemo.controllers;
 
 
-import edu.ucsb.cs156.spring.backenddemo.services.CountryCodeQueryService;
 import edu.ucsb.cs156.spring.backenddemo.services.LocationQueryService;
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,7 +21,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name="location info from https://public.opendatasoft.com/explore/dataset/countries-codes")
+@Tag(name="Location info from nominatim.org")
 @Slf4j
 @RequestMapping("/api/locations")
 @RestController
@@ -34,10 +33,10 @@ public class LocationController {
     @Autowired
     LocationQueryService locationQueryService;
     
-    @Operation(summary="Get your location and more", description ="Location data uploaded to OpenDataSoft by the International Labour Organization")
+    @Operation(summary="Get list of locations that match a given location name", description ="Location info from nominatim.org")
     @GetMapping("/get")
     public ResponseEntity<String> getLocation(
-        @Parameter(name="location", example="United States") @RequestParam String location
+        @Parameter(name="location", example="Isla Vista") @RequestParam String location
     ) throws JsonProcessingException {
         log.info("getLocation: location={}", location);
         String result = locationQueryService.getJSON(location);
