@@ -3,7 +3,7 @@
 Lab instructions: <https://ucsb-cs156.github.io/f23/lab/team01.html>
 
 ```
-|   Name    | GitHub Id         |  Service                    | Controller                |
+| Name      | GitHub Id         |  Service                    | Controller                |
 |-----------|-------------------|-----------------------------|---------------------------|
 |  Madison  |    madisonlong1   |   `LocationQueryService`    |   `LocationConstroller`   |
 |  Karim    |  KarimBenyassine1 |     `JokeQueryService`      |     `JokeController`      |   
