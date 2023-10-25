@@ -30,10 +30,10 @@ public class LocationQueryService {
 <span class="fc" id="L30">        restTemplate = restTemplateBuilder.build();</span>
 <span class="fc" id="L31">    }</span>
 
-    public static final String ENDPOINT = &quot;https://nominatim.openstreetmap.org/search/{location}?format=json&quot;;
+    public static final String ENDPOINT = &quot;https://nominatim.openstreetmap.org/search?q={location}&amp;format=json&quot;;
 
     public String getJSON(String location) throws HttpClientErrorException {
-<span class="fc" id="L36">        log.info(&quot;country={}&quot;, location);</span>
+<span class="fc" id="L36">        log.info(&quot;location={}&quot;, location);</span>
 
 <span class="fc" id="L38">        HttpHeaders headers = new HttpHeaders();</span>
 <span class="fc" id="L39">        headers.setAccept(List.of(MediaType.APPLICATION_JSON));</span>
